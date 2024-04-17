@@ -1,0 +1,757 @@
+
+*,
+*::before,
+*::after {
+    --azul: #0a3f8c;
+    --azul-oscuro: #1d3354;
+    --azul-medio: #467599;
+    --azul-claro: #9ed8db;
+    --celeste: #9ed8db;
+    --negro: #000;
+    
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Roboto, Arial, Helvetica, sans-serif;
+    background-color: white;
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: auto;
+    font-size: 14px;
+    color: white;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+/* Cabecera */
+
+.cabecera__container {
+    background-color: var(--azul);
+    height: 80px;
+    width: 100%;
+    padding: 0 25px;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+}
+
+.cabecera__logo{
+    height: 80px;
+    width: 80px;
+}
+
+.menu__referencias{
+    color: var(white);
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 20px;
+}
+
+.menu__referencias:hover{
+    background-color: var(--azul-medio);
+    color: var(white);
+    padding: 8px;
+    border-radius: 10px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.menu__referencias:nth-child(-n+4){
+    display: none;
+}
+
+.presentacion{
+    position: relative;
+    top: 80px;
+    height: 410px;
+    width: 100%;
+    padding-top: 20px;
+}
+
+.presentacion__foto{
+    height: 100px;
+    width: 100px;
+    border-radius: 100px;
+}
+
+.presentacion__nombre{
+    color: var(--negro);
+    font-size: 25px;
+    padding: 10px;
+    line-height: 1.5;
+}
+
+.presentacion__info{
+    color: var(--azul-oscuro);
+    padding: 10px;    
+    line-height: 1.5;
+}
+
+.presentacion__redes{
+    color: var(--azul-medio);
+    display: flex;
+    justify-content: space-around;
+}
+
+.sobremi{ 
+    position: relative;
+    height: 300px;
+    width: 100%;
+    margin-top: 10px;
+    margin-top: 100px;
+}
+
+.sobremi__titulo{
+    font-size: 20px;
+    color: var(--azul-oscuro);
+    padding: 10px;
+    text-align: left;
+    text-transform: uppercase;
+}
+
+.sobremi__parrafo{
+    color: var(--azul-medio);
+    text-align: justify;
+    line-height: 1.5;
+    margin: 10px;
+}
+
+.sobremi__firma{
+    color: var(--azul-oscuro);
+    font-size: 15px;
+    padding: 10px;
+    height: 40px;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.skill{
+    height: auto;
+    padding-top: 55px;
+}
+
+.skills__titulo{
+    font-size: 20px;
+    color: var(--azul-oscuro);
+    margin: 20px;
+    text-transform: uppercase;
+}
+
+.skills__menu{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 35px;
+    padding: 20px;
+    justify-content: space-around;
+}
+
+.skill-html{
+    font-size: 100px;
+    color: #e8622a;
+}
+
+.skill-js{
+    font-size: 100px;
+    color: #f7e018;
+}
+
+.skill-php{
+    font-size: 100px;
+    color: #4d588e;
+}
+
+.skill-nodejs{
+    font-size: 100px;
+    color: #22ae5a;
+}
+
+.skill-react{
+    font-size: 100px;
+    color: #5ed3f3;
+}
+
+.skill-css{
+    font-size: 100px;
+    color: #2862e9;
+}
+
+.skill__p{
+    font-size: 15px;
+    color: black;
+    margin: 5px;
+}
+
+.education__titulo,
+.profesional__titulo,
+.contacto__titulo{
+    font-size: 20px;
+    color: var(--azul-oscuro);
+    margin: 20px;
+    text-transform: uppercase;
+}
+
+.education,
+.profesional{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 10px;
+    gap: 10px;
+}
+
+.education__img,
+.proyect__img{
+    height: 200px;
+    width: 300px;
+    border: 2px solid #000;
+    border-radius: 15px;
+}
+
+.education__tit,
+.proyect__tit{
+    font-size: 20px;
+    color: var(--azul-oscuro);
+    margin: 10px;
+}
+
+.education__p,
+.proyect__p{
+    font-size: 20px;
+    color: var(--azul-medio);
+    margin-bottom: 1rem;
+}
+
+.proyect__botones{
+    display: flex;
+    justify-content: center;
+}
+
+.proyect{
+    margin-top: 20px;
+}
+
+.btn-repositorio{
+    height: 40px;
+    width: 50%;
+    margin-right: 10px;
+    border: 2px solid var(--azul-medio);
+    color: var(--azul-oscuro);
+    font-size: 20px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 15px;
+}
+
+.btn-demo{
+    height: 40px;
+    width: 50%;
+    margin-right: 10px;
+    border: 2px solid var(--azul-medio);
+    color: var(--azul-oscuro);
+    font-size: 20px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 15px;
+}
+
+.btn-demo:hover,
+.btn-repositorio:hover{
+    background-color: var(--azul-oscuro);
+    color: white;
+}
+
+.contacto{
+    padding: 15px;
+}
+
+.contacto__p{
+    font-size: 15px;
+    color: var(--azul-medio);
+    text-align: left;
+    line-height: 1.5;
+}
+
+.form-group{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.form-content{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;  
+}
+
+.form-content label{
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    margin: 10px;
+    font-size: 18px;
+    color: var(--azul-medio);
+
+}
+
+.form-content input{
+    width: 100%;
+    height: 45px;
+    border-radius: 15px;
+    border: solid 1px var(--azul-medio);
+    color: var(--azul-medio);
+    padding-left: 10px;
+}
+
+.form-content input:focus{
+    outline: none;
+}
+
+.form-content textarea{
+    width: 100%;
+    border-radius: 15px;
+    border: solid 1px var(--azul-medio);
+    color: var(--azul-medio);
+    padding-left: 10px;
+    padding: 10px;
+}
+
+/* .botones{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 15px;
+}
+
+.btn-submit{
+    display: flex;
+    height: 40px;
+    width: 80%;
+    justify-content: center;
+    border-radius: 15px;
+    color: white;
+    background-color: var(--azul-oscuro);
+    margin-bottom: 15px;
+    cursor: pointer;
+} */
+
+.botones{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    border-radius: 15px;
+    background-color: var(--azul-oscuro);
+    width: 150px;
+    margin: 20px;
+    gap: 10px;
+    cursor: pointer;
+}
+
+.btn-submit{
+    color: white;
+    background: none;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.icono-svg{
+    height: 18px;
+    font-size: 18px;
+}
+
+.img-form{
+    display: none;
+}
+
+.rodapie__container{
+    height: 80px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.rodapie__container p{
+    font-size: 20px;
+    margin: 10px;
+    color: var(--azul-medio);
+}
+
+@media (min-width:834px) {
+
+    /* Cabecera */ 
+    .presentacion{
+        display: flex;
+        flex-direction: row-reverse;
+        height: 280px;
+    }
+    .p__foto{
+        width: 30%;
+        height: 200px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .presentacion__foto{
+        height: 150px;
+        width: 150px;
+        border-radius: 100px;
+    }
+    .div__presentacion{
+        width: 70%;
+        height: 200px;
+    }
+
+    .presentacion__redes{
+        display: flex;
+        justify-content: center;
+        gap: 25px;
+    }
+
+    .sobremi{ 
+        position: relative;
+        height: 250px;
+        width: 100%;
+        padding: 10px;
+        margin-top: 10px;
+    }
+
+    .education__img{
+    height: 200px;
+    width: 200px;
+    border: 2px solid #000;
+    border-radius: 15px;
+    }
+
+    /* Rodapie -- Footer */
+    .rodapie__container{
+        justify-content: center;
+    }
+}
+
+@media (min-width:1440px) {
+    .cabecera__container{
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+    }
+    .cabecera__referencias{
+        width: 70%;
+        display: flex;
+        justify-content: flex-end;
+        gap: 40px;
+        font-size: 25px;
+    }
+    .menu__referencias:nth-child(-n+4){
+        display: flex;
+    }
+
+    .presentacion{
+        height: 90vh;
+        width: 100%;
+        margin-bottom: 100px;
+        background: url('../img/fondo-presentacion.avif');
+        background-size: cover;
+        position: relative;
+    }
+    .presentacion{
+        background-color: rgba(255, 255, 255, 0.5);
+    }
+
+    .p__foto{
+        width: 30%;
+        height: 100%;
+    }
+    .div__presentacion{
+        width: 70%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-left: 20px;
+    }
+
+    .presentacion__foto{
+        height: 300px;
+        width: 300px;
+        border-radius: 50%;
+        border: 4px solid #fff;
+    }
+    
+    .presentacion__nombre{
+        color: white;
+        font-size: 60px;
+        padding: 20px;
+        line-height: 1.25;
+    }
+    
+    .presentacion__info{
+        color: white;
+        padding: 10px;    
+        line-height: 1.5;
+        font-size: 25px;
+    }
+    
+    .presentacion__redes{
+        color: white    ;
+        display: flex;
+        justify-content: space-around;
+        font-size: 25px;
+        gap: 40px;
+        margin: 30px;
+    }
+
+    .sobremi{ 
+        position: relative;
+        height: 350px;
+        width: 100%;
+        padding: 25px;
+        margin-top: 10px;
+    }
+    
+    .sobremi__titulo{
+        font-size: 40px;
+        padding: 10px;
+        text-align: left;
+        text-transform: uppercase;
+    }
+    
+    .sobremi__parrafo{
+        text-align: justify;
+        line-height: 1.5;
+        margin: 10px;
+        font-size: 25px;
+    }
+    
+    .sobremi__firma{
+        font-size: 25px;
+        padding: 10px;
+        height: 40px;
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+    }
+    
+    .skills__titulo{
+        font-size: 40px;
+        margin: 20px;
+        text-transform: uppercase;
+    }
+
+    .skills__menu{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 35px;
+        padding: 20px;
+        justify-content: space-around;
+    }
+    
+    .skill-html{
+        font-size: 125px;
+    }
+    
+    .skill-js{
+        font-size: 125px;
+    }
+    
+    .skill-php{
+        font-size: 125px;
+    }
+    
+    .skill-nodejs{
+        font-size: 125px;
+    }
+    
+    .skill-react{
+        font-size: 125px;
+    }
+    
+    .skill-css{
+        font-size: 125px;
+    }
+    
+    .skill__p{
+        font-size: 25px;
+        margin: 20px;
+    }
+
+    .education__titulo,
+    .profesional__titulo,
+    .contacto__titulo{
+        font-size: 40px;
+        margin: 25px;
+        text-transform: uppercase;
+    }
+
+    .education,
+    .profesional{
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        padding: 10px;
+        gap: 10px;
+    }
+
+    .education__img,
+    .proyect__img{
+        height: 300px;
+        width: 400px;
+        border: 2px solid #000;
+        border-radius: 15px;
+    }
+
+    .education__tit,
+    .proyect__tit{
+        font-size: 30px;
+        margin: 10px;
+    }
+
+    .education__p,
+    .proyect__p{
+        font-size: 25px;
+        margin-bottom: 1rem;
+    }
+
+    .proyect__botones{
+        display: flex;
+        justify-content: center;
+    }
+
+    .proyect{
+        margin-top: 20px;
+    }
+
+    .btn-repositorio{
+        height: 50px;
+        width: 50%;
+        margin-right: 10px;
+        border: 2px solid var(--azul-medio);
+        font-size: 30px;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 15px;
+    }
+
+    .btn-demo{
+        height: 50px;
+        width: 50%;
+        margin-right: 10px;
+        border: 2px solid var(--azul-medio);
+        font-size: 30px;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 15px;
+    }
+
+    .formulario{
+        display: flex;
+        width: 100%;
+        margin-top: 40px;
+    }
+
+    .img-form{
+        display: flex;
+        width: 50%;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .form-contact{
+        display: flex;
+        width: 50%;
+        flex-direction: column;
+    }
+
+    .form{
+        width: 100%;
+        padding: 20px;
+    }
+
+    .contacto__p{
+        font-size: 25px;
+        text-align: center;
+        line-height: 1.5;
+    }
+
+    .form-content label{
+        font-size: 22px;  
+    }
+    
+    .form-content input{
+        width: 100%;
+        height: 50px;
+        border-radius: 15px;
+        border: solid 1px var(--azul-medio);
+        padding-left: 10px;
+        font-size: 20px;
+    }
+
+    .botones{
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        height: 60px;
+        border-radius: 15px;
+        background-color: var(--azul-oscuro);
+        width: 250px;
+        margin: 20px;
+        gap: 10px;
+        cursor: pointer;
+    }
+    
+    .btn-submit{
+        color: white;
+        background: none;
+        font-size: 25px;
+        cursor: pointer;
+    }
+
+    .icono-svg{
+        height: 40px;
+        font-size: 25px;
+    }
+
+    .rodapie__container p{
+        font-size: 25px;
+        margin: 10px;
+    }
+
+    @keyframes subir-bajar {
+        0% {
+          transform: translateY(0); /* La imagen comienza en su posición normal */
+        }
+        50% {
+          transform: translateY(-20px); /* La imagen se mueve hacia arriba */
+        }
+        100% {
+          transform: translateY(0); /* La imagen vuelve a su posición normal */
+        }
+      }
+      
+      /* Aplica la animación a la imagen */
+      .animacion-subir-bajar {
+        animation: subir-bajar 2s ease-in-out infinite; /* Aplica la animación durante 2 segundos con un movimiento suave */
+      }
+}
